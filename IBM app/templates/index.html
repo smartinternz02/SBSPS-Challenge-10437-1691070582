@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YO YO YO </title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="static/style.css"/>
+  </head>
+             
+  <body>
+    <div class="head">
+    <h4 style="text-align: center;font-family: Roboto Mono;" ><b>Campus Placement Predictor </b></h4>
+  </div>
+    <form action = "/" method="POST">
+      <div class="container z-depth-5 ">
+        <div class="content">
+      <div class="row">
+       <div class="input-field col s6">
+    <select id="index" name="Stream" required>
+      <option  disabled selected>Choose your option</option>
+      <option value="3">Electronics And Communication</option>
+      <option value="1">Computer Science</option>
+      <option value="4">Information Technology</option>
+      <option value="5">Mechanical</option>
+      <option value="0">Civil</option>
+      <option value="2">Electrical</option>
+    </select>
+    <label>Enter your stream</label>
+       </div>
+       <div class="input-field col s6">
+        <select id="source" name="Gender" required>
+          <option disabled selected>Choose your option</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      <label>Enter your gender</label>
+    </div>
+      </div>
+        <div class="input-field" id="source2">
+          <input placeholder="Enter the Age" type="text" id="source2_text" name="Age" required>
+    <label>Enter your age</label>
+        </div>
+  <div class="row">
+      <div class="input-field col s6">
+        <select id="region" name="Internship" required>
+          <option value="" disabled selected>Choose your option</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <label>Have you done any internship</label>
+      </div>
+      <div class="input-field col s6">
+        <select id="provider" name="Hostel" required>
+          <option value="" disabled selected>Choose your option</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <label>Hosteller?</label>
+      </div>
+    </div>
+      <div class="input-field ">
+        <select id="status" name="Backlogs" required>
+          <option value="" disabled selected>Choose your option</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+        <label>Do you have a history of backlogs?</label>
+      </div>
+<br>
+      <div class="input-field" id="23">
+        <input placeholder="Enter the CGPA" type="text" id="cvb" name="CGPA" required>
+  <label>Enter your CGPA</label>
+      </div>     
+
+
+ 
+<div class="btndiv">
+  <button class="btn waves-effect waves-light btn1" onclick="returntex()" type="submit">Generator Query
+    <i class="material-icons right">send</i> 
+  </button>
+  <button class="btn waves-effect waves-light btnclear" type="reset" onclick="clearbutton()">Clear
+    <i class="material-icons right">clear</i> 
+  </button>
+</div><br>
+
+    <div class="ou" style="display: none;" id="ou">
+        <h5><b>Query:-</b></h5>
+        <p id="out"></p>
+        <p id="Splunk"></p>
+      </div>
+</div>
+
+</div>
+
+  
+    </form>
+<h1>{{out}}</h1>
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    M.FormSelect.init(elems)
+  });
+    </script>
+    <script>
+      
+      document.addEventListener('DOMContentLoaded', function() {
+    var flot_btn = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(flot_btn);
+  });
+    </script>
+    
+  </body>
+</html>
